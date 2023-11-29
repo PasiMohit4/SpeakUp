@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speak_up/constants.dart';
+import 'package:speak_up/views/screens/spanish/spanish%20lesson/spanish_lesson1.dart';
+import 'package:speak_up/views/screens/spanish/spanish%20lesson/spanish_lesson2.dart';
 import 'package:speak_up/views/screens/spanish/spanish_lessonscreen.dart';
 import 'package:speak_up/views/screens/spanish/spanish_quizscreen.dart';
 
@@ -40,6 +42,8 @@ class _SpanishHomeScreenState extends State<SpanishHomeScreen> {
         ],
       ),
       body: spanish[pageIdx],
+
+
     );
   }
 }
