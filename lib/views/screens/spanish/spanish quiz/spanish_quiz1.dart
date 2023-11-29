@@ -21,7 +21,7 @@ class _SpanishQuiz1State extends State<SpanishQuiz1> {
   late Future _questions;
 
   Future<List<Question>> getData() async {
-    return db.fetchQuestion();
+    return db.fetchQuestions();
   }
 
   @override
@@ -160,7 +160,22 @@ class _SpanishQuiz1State extends State<SpanishQuiz1> {
           }
           else {
             return const Center(
-              child: CircularProgressIndicator(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 20.0),
+                  Text('Please wait while Question are loading... ',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+
+                      color: neutral,
+                      decoration: TextDecoration.none,
+                      fontSize: 18.0,
+                    ),
+                  ),
+                ],
+              ),
             );
           }
           return const Center(child: Text('No data'),);
