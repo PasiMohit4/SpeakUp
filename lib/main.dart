@@ -13,7 +13,12 @@ import 'package:speak_up/views/screens/selecting_screen.dart';
 import 'package:speak_up/views/screens/spanish/spanish_homescreen.dart';
 
 void main() async {
+  var db = DBQuizConnect();
 
+  db.fetchspanishquiz1();
+  db.fetchspanishquiz2();
+  db.fetchspanishquiz3();
+  db.fetchspanishquiz4();
 
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

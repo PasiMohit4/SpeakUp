@@ -15,13 +15,8 @@ class SpanishQuiz1 extends StatefulWidget {
 }
 
 class _SpanishQuiz1State extends State<SpanishQuiz1> {
-  List<Question> _questions = [
-    Question(
-        id: '10',
-        title: 'What is 2 + 2?',
-        options: {'4': true, '6': false, '8': false, '2': false},
-    )
-  ];
+
+  List<Question> _questions = [];
 
   int index = 0;
   int score = 0;
