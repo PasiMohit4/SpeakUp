@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:speak_up/constants.dart';
 import 'package:speak_up/views/screens/auths/signup_screen.dart';
 import 'package:speak_up/views/widgets/text_input_field.dart';
@@ -17,20 +18,15 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'SpeakUp',
-              style: TextStyle(
-                  fontSize: 30,
-                  color: buttonColor,
-                  fontWeight: FontWeight.w900
-              ),
-            ),
              const Text(
               'Login',
-              style: TextStyle(
+              style:
+              TextStyle(
+
                   fontSize: 25,
                   fontWeight: FontWeight.w700
               ),
+
             ),
             const SizedBox(height: 25,),
             Container(
@@ -60,10 +56,11 @@ class LoginScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: buttonColor,
                 borderRadius: const BorderRadius.all(
-                    Radius.circular(5)
+                    Radius.circular(20)
                 )
               ),
               child: InkWell(
+                borderRadius: BorderRadius.circular(20),
                 onTap: () => authController.loginUser(
                     _emailcontroller.text,
                     _passwordcontroller.text

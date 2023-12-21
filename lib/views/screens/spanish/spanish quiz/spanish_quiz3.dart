@@ -7,20 +7,20 @@ import 'package:speak_up/views/widgets/question_widget.dart';
 import 'package:speak_up/views/widgets/quiz_next_button.dart';
 import 'package:speak_up/views/widgets/result_box.dart';
 
-class SpanishQuiz2 extends StatefulWidget {
-  const SpanishQuiz2({Key? key}) : super(key: key);
+class SpanishQuiz3 extends StatefulWidget {
+  const SpanishQuiz3({Key? key}) : super(key: key);
 
   @override
-  State<SpanishQuiz2> createState() => _SpanishQuiz2State();
+  State<SpanishQuiz3> createState() => _SpanishQuiz3State();
 }
 
-class _SpanishQuiz2State extends State<SpanishQuiz2> {
+class _SpanishQuiz3State extends State<SpanishQuiz3> {
   var db = DBQuizConnect();
 
   late Future _questions;
 
   Future<List<Question>> getData() async {
-    return db.fetchSpanishQuiz2();
+    return db.fetchSpanishQuiz3();
   }
 
   @override
@@ -109,7 +109,7 @@ class _SpanishQuiz2State extends State<SpanishQuiz2> {
               // change the background
               backgroundColor: backgroundColor,
               appBar: AppBar(
-                title: const Text('Quiz 2'),
+                title: const Text('Quiz 3'),
                 backgroundColor: backgroundColor,
                 shadowColor: Colors.transparent,
                 actions: [

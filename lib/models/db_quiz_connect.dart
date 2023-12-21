@@ -30,27 +30,33 @@ class DBQuizConnect {
   }
 
   //fetching quiz1
-  Future<void> fetchspanishquiz1() async {
-    http.get(spanishquiz1).then((response) {
+  Future<List<Question>> fetchSpanishQuiz1() async {
+    // we got the data from just using this. now let's print it to see what we got.
+    return http.get(spanishquiz1).then((response) {
+      // the 'then' method returns a 'response' which is our data.
+      // to whats inside we have to decode it first.
       var data = json.decode(response.body) as Map<String, dynamic>;
-      List<Question> newQuestions =[];
+      List<Question> newQuestions = [];
       data.forEach((key, value) {
         var newQuestion = Question(
-            id: key,
-            title: value['title'],
-            options: Map.castFrom(value['options']),
+          id: key, // the encrypted key/the title we gave to our data
+          title: value['title'], // title of the question
+          options: Map.castFrom(value['options']), // options of the question
         );
+        // add to newQuestions
         newQuestions.add(newQuestion);
       });
-      print(newQuestions);
+      return newQuestions;
     });
   }
 
 
+
+
   //fetching quiz2
-  Future<void> fetchspanishquiz2() async {
-    http.get(spanishquiz2).then((response) {
-      var data = json.decode(response.body) as Map<String, dynamic>;
+  Future<List<Question>> fetchSpanishQuiz2() async {
+    return http.get(spanishquiz2).then((response) {
+      var data = json.decode(response.body)as Map<String, dynamic>;
       List<Question> newQuestions =[];
       data.forEach((key, value) {
         var newQuestion = Question(
@@ -60,15 +66,15 @@ class DBQuizConnect {
         );
         newQuestions.add(newQuestion);
       });
-      print(newQuestions);
+      return newQuestions;
     });
   }
 
 
   //fetching quiz3
-  Future<void> fetchspanishquiz3() async {
-    http.get(spanishquiz3).then((response) {
-      var data = json.decode(response.body) as Map<String, dynamic>;
+  Future<List<Question>> fetchSpanishQuiz3() async {
+    return http.get(spanishquiz3).then((response) {
+      var data = json.decode(response.body)as Map<String, dynamic>;
       List<Question> newQuestions =[];
       data.forEach((key, value) {
         var newQuestion = Question(
@@ -78,14 +84,14 @@ class DBQuizConnect {
         );
         newQuestions.add(newQuestion);
       });
-      print(newQuestions);
+      return newQuestions;
     });
   }
 
   //fetching quiz4
-  Future<void> fetchspanishquiz4() async {
-    http.get(spanishquiz4).then((response) {
-      var data = json.decode(response.body) as Map<String, dynamic>;
+  Future<List<Question>> fetchSpanishQuiz4() async {
+    return http.get(spanishquiz4).then((response) {
+      var data = json.decode(response.body)as Map<String, dynamic>;
       List<Question> newQuestions =[];
       data.forEach((key, value) {
         var newQuestion = Question(
@@ -95,7 +101,7 @@ class DBQuizConnect {
         );
         newQuestions.add(newQuestion);
       });
-      print(newQuestions);
+      return newQuestions;
     });
   }
 

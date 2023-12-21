@@ -107,7 +107,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       decoration: BoxDecoration(
                           color: buttonColor,
                           borderRadius: const BorderRadius.all(
-                              Radius.circular(5)
+                              Radius.circular(20)
                           )
                       ),
                       child: InkWell(

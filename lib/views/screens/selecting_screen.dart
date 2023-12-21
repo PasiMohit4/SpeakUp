@@ -15,6 +15,7 @@ class SelectingScreen extends StatelessWidget {
             children: [
 
                 const Text(
+                  textAlign : TextAlign.center,
                     'Which language would you like to learn ? ',
                   style: TextStyle(
                       fontSize: 20,
@@ -29,16 +30,42 @@ class SelectingScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: buttonColor,
                     borderRadius: const BorderRadius.all(
-                        Radius.circular(5)
+                        Radius.circular(20)
                     )
                 ),
                 child: InkWell(
+                  borderRadius: BorderRadius.circular(20.0),
                   onTap: ()  => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SpanishHomeScreen(),
                   ),
                   ),
                   child: const Center(
                     child: Text(
                       'Spanish',style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700
+                    ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 30,),
+              Container(
+                width: MediaQuery.of(context).size.width-40,
+                height: 50,
+                decoration: BoxDecoration(
+                    color: buttonColor,
+                    borderRadius: const BorderRadius.all(
+                        Radius.circular(20)
+                    )
+                ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(20.0),
+                  onTap: ()  => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SpanishHomeScreen(),
+                  ),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      'French',style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w700
                     ),

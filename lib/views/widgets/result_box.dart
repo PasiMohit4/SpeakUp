@@ -60,6 +60,7 @@ class ResultBox extends StatelessWidget {
             GestureDetector(
               onTap: onPressed,
               child: const Text(
+                textAlign: TextAlign.center,
                 'Start Over',
                 style: TextStyle(
                   color: Colors.blue,

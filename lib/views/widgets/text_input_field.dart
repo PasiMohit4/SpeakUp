@@ -23,7 +23,7 @@ class TextInputField extends StatelessWidget {
         prefixIcon: Icon(icon),
         labelStyle: const TextStyle(fontSize: 20,),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
+          borderRadius: BorderRadius.circular(20),
           borderSide: const BorderSide(
             color: borderColor,
           )

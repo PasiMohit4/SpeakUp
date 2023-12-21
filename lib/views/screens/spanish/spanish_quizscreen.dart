@@ -29,7 +29,7 @@ class _SpanishQuizScreenState extends State<SpanishQuizScreen> {
               decoration: BoxDecoration(
                   color: buttonColor,
                   borderRadius: const BorderRadius.all(
-                      Radius.circular(5)
+                      Radius.circular(20)
                   )
               ),
               child: InkWell(
@@ -54,7 +54,7 @@ class _SpanishQuizScreenState extends State<SpanishQuizScreen> {
               decoration: BoxDecoration(
                   color: buttonColor,
                   borderRadius: const BorderRadius.all(
-                      Radius.circular(5)
+                      Radius.circular(20)
                   )
               ),
               child: InkWell(
@@ -78,7 +78,7 @@ class _SpanishQuizScreenState extends State<SpanishQuizScreen> {
               decoration: BoxDecoration(
                   color: buttonColor,
                   borderRadius: const BorderRadius.all(
-                      Radius.circular(5)
+                      Radius.circular(20)
                   )
               ),
               child: InkWell(
@@ -102,7 +102,7 @@ class _SpanishQuizScreenState extends State<SpanishQuizScreen> {
               decoration: BoxDecoration(
                   color: buttonColor,
                   borderRadius: const BorderRadius.all(
-                      Radius.circular(5)
+                      Radius.circular(20)
                   )
               ),
               child: InkWell(

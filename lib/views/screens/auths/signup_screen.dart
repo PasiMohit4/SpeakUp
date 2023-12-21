@@ -18,14 +18,6 @@ class SignupScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'SpeakUp',
-              style: TextStyle(
-                  fontSize: 35,
-                  color: buttonColor,
-                  fontWeight: FontWeight.w900
-              ),
-            ),
             const Text(
               'Register',
               style: TextStyle(
@@ -90,7 +82,7 @@ class SignupScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   color: buttonColor,
                   borderRadius: const BorderRadius.all(
-                      Radius.circular(5)
+                      Radius.circular(20)
                   )
               ),
               child: InkWell(
